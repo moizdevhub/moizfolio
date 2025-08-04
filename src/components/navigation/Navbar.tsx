@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile menu toggle button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-end justi``fy-end w-full">
             <button
               onClick={toggleMobileMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
