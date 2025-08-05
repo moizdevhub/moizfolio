@@ -26,17 +26,20 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <nav className="w-full absolute top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-full z-50 top-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-center h-20">
           {/* Desktop Navigation - Centered container only */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-1 bg-black/80 backdrop-blur-sm border border-gray-700/40 rounded-full px-6 py-3 shadow-md">
+            {/* <div className="flex items-center space-x-1  bg-black/80 backdrop-blur-sm border border-gray-700/40 rounded-full px-6 py-3 shadow-md"> */}
+            <div className='bg-gray-800/50 border border-foreground backdrop-blur-sm shadow-md rounded-full px-6 py-2
+          flex items-center gap-1
+          text-foreground'>
               {navItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-black"
+                  className="text-white hover:text-white px-4 py-2 rounded-full text-base font-bold transition-all duration-200 hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-black"
                   aria-label={`Navigate to ${item.label}`}
                 >
                   {item.label}
@@ -46,7 +49,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile menu toggle button */}
-          <div className="md:hidden flex items-end justi``fy-end w-full">
+          <div className="md:hidden flex items-end justify-end w-full">
             <button
               onClick={toggleMobileMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
